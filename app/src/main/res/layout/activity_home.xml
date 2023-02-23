@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:background="@drawable/background_theme"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:src="@drawable/ic_logo"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/image" />
+
+        <!--Widget for exoplayer view-->
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:background="@drawable/background_player_view"
+            app:controller_layout_id="@layout/customized_exo_playback_control_view"
+            android:layout_marginHorizontal="5dp"
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:show_buffering="when_playing"
+            app:show_shuffle_button="true"/>
+</LinearLayout>

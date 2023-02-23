@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Kotlin Standard Application</string>
+    <string name="app_description">This is my Kotlin standard application for learning by my own</string>
+    <string name="all_rights_reserved">&#174; All rights reserved by Phong Kaster</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Tiếp tục</string>
+    <string name="start">Bắt đầu</string>
+    <string name="intro_title_1">Cấu hình như Tiktok Studio</string>
+    <string name="intro_title_2">Live stream song song</string>
+    <string name="intro_title_3">Nhiều chức năng cải tiến so với Tiktok Studio</string>
+    <string name="intro_description_1">Với giao diện dễ dùng, đầy đủ như Tiktok Studio</string>
+    <string name="intro_description_2">Hệ thống cung cấp tính năng cho bạn live song song, giảm thiểu vấn đề quét bản quyền</string>
+    <string name="intro_description_3">Cung cấp tính năng cho bạn livestream từ video đã có, mà không cần dùng tiktok studio</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="login">Đăng nhập</string>
+    <string name="or">Hoặc</string>
+    <string name="image">image</string>
+    <string name="default_email">phongkaster@gmail.com</string>
+    <string name="snooze">Snooze</string>
+</resources>

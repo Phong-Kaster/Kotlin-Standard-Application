@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/drawable/ic_logo.xml" value="0.139" />
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/drawable/ic_national_sozialismus.xml" value="0.139" />
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/layout/activity_introduction.xml" value="0.16770833333333332" />
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/layout/login.xml" value="0.16666666666666666" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/background_button_theme.xml" value="0.1345" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/background_gradient.xml" value="0.1345" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/background_player_view.xml" value="0.1085" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/button_login.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/button_login_google.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/button_theme.xml" value="0.138" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/customized_exoplayer_2.xml" value="0.1085" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.1805" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_fullscreen.xml" value="0.1085" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_fullscreen_enter.xml" value="0.1085" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_introduction_1.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_introduction_2.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_introduction_3.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_logo.xml" value="0.1345" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_logo_google.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_pause.xml" value="0.146" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/ic_play.xml" value="0.146" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/input_theme.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/tab_indicator.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/tab_indicator_selector.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/tab_indicator_unchecked.xml" value="0.1375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/text_color_theme.xml" value="0.1345" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/text_theme.xml" value="0.138" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout-land/activity_home.xml" value="0.1083984375" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/activity_home.xml" value="0.18461539003270633" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/activity_introduction.xml" value="0.1" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/activity_login.xml" value="0.18461539003270633" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/activity_main.xml" value="0.2436923148431724" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/activity_welcome.xml" value="0.16770833333333332" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/customized_exo_playback_control_view.xml" value="0.2436923148431724" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/customized_exo_playback_control_view_2.xml" value="0.1" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/exo_playback_control_view.xml" value="0.2436923148431724" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/fragment_introduction.xml" value="0.16246154322878156" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/fragment_introduction1.xml" value="0.16770833333333332" />
+        <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/layout/fragment_introduction2.xml" value="0.16770833333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
