@@ -20,4 +20,6 @@
     <string name="snooze">Snooze</string>
     <string name="widget_activity">Widget activity</string>
     <string name="click">Click !</string>
+    <string name="enter_your_word">Enter your word</string>
+    <string name="save">Save</string>
 </resources>

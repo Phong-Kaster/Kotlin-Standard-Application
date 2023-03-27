@@ -17,6 +17,13 @@
         android:theme="@style/Theme.KotlinStandardApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Widgetpage.WidgetConfigurationActivity"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Widgetpage.WidgetActivity"
             android:exported="false" />
         <activity
@@ -47,15 +54,32 @@
             </intent-filter>
         </activity>
 
-
-        <receiver android:name=".Widgetpage.WidgetButton"
+        <!-- Simple Widget -->
+        <receiver
+            android:name=".Widgetpage.WidgetButton"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
+
+            <meta-data
+                android:name="android.appwidget.provider"
                 android:resource="@xml/widget_button_info" />
         </receiver>
 
+        <!-- Widget with Configuration -->
+        <receiver
+            android:name=".Widgetpage.WidgetConfigurationButton"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_button_configuration_info" />
+        </receiver>
+
     </application>
+
 </manifest>
