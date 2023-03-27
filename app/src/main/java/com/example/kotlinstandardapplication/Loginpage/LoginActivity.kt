@@ -1,10 +1,10 @@
-package com.example.kotlinstandardapplication.Login
+package com.example.kotlinstandardapplication.Loginpage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import com.example.kotlinstandardapplication.Home.HomeActivity
+import com.example.kotlinstandardapplication.Homepage.HomeActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.databinding.ActivityLoginBinding

@@ -18,4 +18,6 @@
     <string name="image">image</string>
     <string name="default_email">phongkaster@gmail.com</string>
     <string name="snooze">Snooze</string>
+    <string name="widget_activity">Widget activity</string>
+    <string name="click">Click !</string>
 </resources>

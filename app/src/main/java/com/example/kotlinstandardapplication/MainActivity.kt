@@ -1,18 +1,13 @@
 package com.example.kotlinstandardapplication
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import com.example.kotlinstandardapplication.Home.HomeActivity
-import com.example.kotlinstandardapplication.Introduction.IntroductionActivity
-import com.example.kotlinstandardapplication.Login.LoginActivity
+import com.example.kotlinstandardapplication.Loginpage.LoginActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.Multipurpose.Notification
-import com.example.kotlinstandardapplication.R
 
 
 class MainActivity : AppCompatActivity() {

@@ -5,6 +5,10 @@
       <map>
         <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/drawable/ic_logo.xml" value="0.139" />
         <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/drawable/ic_national_sozialismus.xml" value="0.139" />
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/drawable/tab_indicator_checked.xml" value="0.1325" />
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/drawable/tab_indicator_selector.xml" value="0.1325" />
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/drawable/tab_indicator_unchecked.xml" value="0.1325" />
+        <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/layout/activity_home.xml" value="0.16770833333333332" />
         <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/layout/activity_introduction.xml" value="0.16770833333333332" />
         <entry key="..\:/GitHub/Kotlin-Standard-Application/app/src/main/res/layout/login.xml" value="0.16666666666666666" />
         <entry key="..\:/GitHub/ParamausStudio/app/src/main/res/drawable/background_button_theme.xml" value="0.1345" />

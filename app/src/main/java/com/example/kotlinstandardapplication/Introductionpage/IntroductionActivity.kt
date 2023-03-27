@@ -1,11 +1,11 @@
-package com.example.kotlinstandardapplication.Introduction
+package com.example.kotlinstandardapplication.Introductionpage
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.size
 import androidx.databinding.DataBindingUtil
-import com.example.kotlinstandardapplication.Login.LoginActivity
+import com.example.kotlinstandardapplication.Loginpage.LoginActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.databinding.ActivityIntroductionBinding

@@ -1,15 +1,9 @@
-package com.example.kotlinstandardapplication.Home
+package com.example.kotlinstandardapplication.Homepage
 
 import android.annotation.SuppressLint
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.content.Context
-import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.graphics.Outline
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
@@ -19,12 +13,9 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose.Companion.convertDPtoPixel
-import com.example.kotlinstandardapplication.Multipurpose.Notification
 import com.example.kotlinstandardapplication.R
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem

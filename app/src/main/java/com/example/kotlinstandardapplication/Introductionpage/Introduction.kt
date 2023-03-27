@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.Introduction
+package com.example.kotlinstandardapplication.Introductionpage
 
 /**
  * @author Phong-Kaster

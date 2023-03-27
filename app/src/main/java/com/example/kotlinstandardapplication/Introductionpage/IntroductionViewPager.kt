@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.Introduction
+package com.example.kotlinstandardapplication.Introductionpage
 
 import android.annotation.SuppressLint
 import android.content.Context
