@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,10 +19,13 @@
         android:theme="@style/Theme.KotlinStandardApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Musicpage.MusicActivity"
+            android:exported="false" />
+        <activity
             android:name=".Widgetpage.WidgetConfigurationActivity"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
         <activity
@@ -53,7 +58,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- Simple Widget -->
         <receiver
             android:name=".Widgetpage.WidgetButton"
@@ -65,7 +69,7 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_button_info" />
-        </receiver>
+        </receiver><!-- end Simple Widget -->
 
         <!-- Widget with Configuration -->
         <receiver
@@ -78,8 +82,12 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_button_configuration_info" />
-        </receiver>
+        </receiver><!-- end Widget with Configuration -->
 
+        <service android:name=".Musicpage.MusicService"/>
+        <receiver android:name=".Musicpage.MusicBroadcastReceiver"
+            android:enabled="true"/>
     </application>
+
 
 </manifest>
