@@ -9,6 +9,13 @@ import com.example.kotlinstandardapplication.R
 import kotlin.math.log
 import kotlin.system.exitProcess
 
+/**
+ * @since 29-03-2023
+ * Music Broadcast Receiver
+ * To use music broadcast receiver, we have to define it in AndroidManifest.xml
+ * this class listens pending intents from music service, then it depends on what received action is
+ * this class will run corresponding functions: action previous, action play, ....
+ */
 class MusicBroadcastReceiver : BroadcastReceiver() {
 
     private val tag = "MusicActivity - Broadcast Receiver"
@@ -30,7 +37,7 @@ class MusicBroadcastReceiver : BroadcastReceiver() {
         val position = MusicActivity.position
         val size = MusicActivity.songs.size
         if( position > 0 ) MusicActivity.position--
-        
+
         /*Log.d(tag, "size: $size - position: $position")*/
 
         MusicActivity.isPlaying = true

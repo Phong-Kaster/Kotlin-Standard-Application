@@ -1,11 +1,7 @@
 package com.example.kotlinstandardapplication.Musicpage
 
 import android.annotation.SuppressLint
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.app.Service
+import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -16,9 +12,17 @@ import android.support.v4.media.session.MediaSessionCompat
 import androidx.core.app.NotificationCompat
 import com.example.kotlinstandardapplication.R
 
+/**
+ * @since 29-03-2023
+ * Music Service
+ * To use music service, we have to define it in AndroidManifest.xml
+ * It's a foreground service.
+ * It creates a music player notification and defines Pending Intents to handle clickOn event
+ * These pending intents is transferred to Music Broadcast receiver to continue handling.
+ */
 class MusicService : Service() {
 
-    private val TAG = "MusicActivity - MusicService"
+    private val tag = "MusicActivity - MusicService"
     private var myBinder = MyBinder()
     private lateinit var mediaSessionCompat : MediaSessionCompat
 
@@ -89,12 +93,20 @@ class MusicService : Service() {
         val pendingIntentExit = PendingIntent.getBroadcast(applicationContext, 0, intentExit, flag)
 
 
+        val intentHome = Intent(this, MusicActivity::class.java)
+        val pendingIntentHome: PendingIntent? = TaskStackBuilder.create(this).run {
+            addNextIntentWithParentStack(intentHome)
+            getPendingIntent(0,
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+        }
+
         /*3. setup notification for playing music & attach pending intents*/
         val position = MusicActivity.position
         val song = MusicActivity.songs[position].name
         val artist = MusicActivity.songs[position].artist
 
         notification = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
+            .setContentIntent(pendingIntentHome)
             .setContentTitle(song)
             .setContentText(artist)
             .setSmallIcon(R.drawable.ic_swastika)
