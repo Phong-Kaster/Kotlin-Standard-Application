@@ -26,4 +26,7 @@
     <string name="home">Home</string>
     <string name="settings">Settings</string>
     <string name="nguyen_thanh_phong">Nguyễn Thành Phong</string>
+    <string name="chart_bar">Chart Bar</string>
+    <string name="chart_pie">Chart Pie</string>
+    <string name="chart_radar">Chart Radar</string>
 </resources>

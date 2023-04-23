@@ -15,7 +15,7 @@ import com.google.android.material.navigation.NavigationBarView
 
 /**
  * @since 23-04-2023
- * this activity uses navigation component to navigate among fragments
+ * this activity uses navigation component + data binding + bottom navigation view + fragment container view
  */
 class NavigationActivity : AppCompatActivity() {
 
@@ -43,6 +43,5 @@ class NavigationActivity : AppCompatActivity() {
     private fun setupEvent()
     {
         navigationBinding.bottomNavigationView.setupWithNavController(navController)
-
     }
 }

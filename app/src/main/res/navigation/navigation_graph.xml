@@ -25,4 +25,24 @@
         android:label="@string/settings"
         tools:layout="@layout/fragment_navigation2" />
 
+    <fragment
+        android:id="@+id/action_chart_bar"
+        android:name="com.example.kotlinstandardapplication.Navigation.ChartBarFragment"
+        android:label="Chart Bar"
+        tools:layout="@layout/fragment_chart_bar" />
+
+
+    <fragment
+        android:id="@+id/action_chart_pie"
+        android:name="com.example.kotlinstandardapplication.Navigation.ChartPieFragment"
+        android:label="Chart Bar"
+        tools:layout="@layout/fragment_chart_pie" />
+
+
+    <fragment
+        android:id="@+id/action_chart_radar"
+        android:name="com.example.kotlinstandardapplication.Navigation.ChartRadarFragment"
+        android:label="Chart Bar"
+        tools:layout="@layout/fragment_chart_radar" />
+
 </navigation>

@@ -82,4 +82,8 @@ dependencies {
 
     // Jetpack Compose Integration
     implementation("androidx.navigation:navigation-compose:$nav_version")
+    /*END OF library for navigation page*/
+
+    /*MPAndroidChart - Chart library*/
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

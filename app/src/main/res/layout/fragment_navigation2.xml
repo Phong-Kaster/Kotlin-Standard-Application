@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Navigation.NavigationFragment2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_centerInParent="true"
+        android:orientation="vertical"
         android:layout_height="match_parent"
-        android:text="Navigation Fragment 2" />
+        tools:context=".Navigation.NavigationFragment2">
 
-</RelativeLayout>
+        <!-- TODO: Update blank fragment layout -->
+        <Button
+            android:id="@+id/buttonChartBar"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/chart_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/buttonChartPie"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/chart_pie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/buttonChartRadar"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/chart_radar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>
+
