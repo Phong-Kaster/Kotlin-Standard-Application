@@ -5,8 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinStandardApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".Navigation.NavigationActivity"
+            android:exported="false" />
         <activity
             android:name=".Musicpage.MusicActivity"
             android:exported="false" />
@@ -57,8 +59,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- Simple Widget -->
+        </activity> <!-- Simple Widget -->
         <receiver
             android:name=".Widgetpage.WidgetButton"
             android:exported="false">
@@ -69,8 +70,7 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_button_info" />
-        </receiver><!-- end Simple Widget -->
-
+        </receiver> <!-- end Simple Widget -->
         <!-- Widget with Configuration -->
         <receiver
             android:name=".Widgetpage.WidgetConfigurationButton"
@@ -82,12 +82,12 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_button_configuration_info" />
-        </receiver><!-- end Widget with Configuration -->
+        </receiver> <!-- end Widget with Configuration -->
+        <service android:name=".Musicpage.MusicService" />
 
-        <service android:name=".Musicpage.MusicService"/>
-        <receiver android:name=".Musicpage.MusicBroadcastReceiver"
-            android:enabled="true"/>
+        <receiver
+            android:name=".Musicpage.MusicBroadcastReceiver"
+            android:enabled="true" />
     </application>
-
 
 </manifest>

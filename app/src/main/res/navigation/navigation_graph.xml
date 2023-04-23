@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/action_home">
+
+
+    <fragment
+        android:id="@+id/action_home"
+        android:name="com.example.kotlinstandardapplication.Navigation.NavigationFragment1"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_navigation1" >
+
+        <action
+            android:id="@+id/action_navigationFragment1_to_navigationFragment2"
+            app:destination="@id/action_settings" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/action_settings"
+        android:name="com.example.kotlinstandardapplication.Navigation.NavigationFragment2"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_navigation2" />
+
+</navigation>

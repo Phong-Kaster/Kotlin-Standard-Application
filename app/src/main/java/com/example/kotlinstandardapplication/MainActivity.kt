@@ -9,6 +9,7 @@ import com.example.kotlinstandardapplication.Loginpage.LoginActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.Multipurpose.Notification
 import com.example.kotlinstandardapplication.Musicpage.MusicActivity
+import com.example.kotlinstandardapplication.Navigation.NavigationActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     private fun openActivity()
     {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MusicActivity::class.java)
+            val intent = Intent(this, NavigationActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)

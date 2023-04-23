@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    tools:context=".MainActivity"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    tools:ignore="UseCompoundDrawables">
+
+
+        <ImageView
+            android:id="@+id/elementIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_swastika" />
+
+        <TextView
+            android:id="@+id/elementName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:text="@string/nguyen_thanh_phong"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+</LinearLayout>
