@@ -21,6 +21,9 @@
             android:name=".Coroutinepage.CoroutineActivity"
             android:exported="false" />
         <activity
+            android:name=".PopupMenu.PopupMenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".Navigation.NavigationActivity"
             android:exported="false" />
         <activity

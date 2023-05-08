@@ -37,7 +37,7 @@ class ChartBarFragment : CoreFragment() {
         /*initialize bar entries*/
         val list = arrayListOf<BarEntry>()
         val entry1 = BarEntry(100f, 100f)
-        val entry2 = BarEntry(101f, 101f)
+        val entry2 = BarEntry(100f, 120f)
         val entry3 = BarEntry(102f, 102f)
         val entry4 = BarEntry(103f, 103f)
         val entry5 = BarEntry(104f, 104f)
