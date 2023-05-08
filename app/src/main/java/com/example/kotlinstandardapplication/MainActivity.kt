@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kotlinstandardapplication.Coroutinepage.CoroutineActivity
 import com.example.kotlinstandardapplication.Loginpage.LoginActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.Multipurpose.Notification
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     private fun openActivity()
     {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, NavigationActivity::class.java)
+            val intent = Intent(this, CoroutineActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)

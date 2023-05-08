@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("androidx.navigation.safeargs")
+    id 'kotlin-kapt'
 }
 
 android {
@@ -86,4 +87,15 @@ dependencies {
 
     /*MPAndroidChart - Chart library*/
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+
+    /*library for Kotlin Coroutines*/
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    /*library for Room database*/
+    implementation("androidx.room:room-runtime:2.4.3")
+    annotationProcessor("androidx.room:room-compiler:2.4.3")
+    kapt("androidx.room:room-compiler:2.4.3")
+    implementation 'androidx.room:room-ktx:2.4.3'
 }
