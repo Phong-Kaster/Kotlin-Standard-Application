@@ -10,6 +10,7 @@ import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.Multipurpose.Notification
 import com.example.kotlinstandardapplication.Musicpage.MusicActivity
 import com.example.kotlinstandardapplication.Navigation.NavigationActivity
+import com.example.kotlinstandardapplication.PopupMenu.PopupMenuActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     private fun openActivity()
     {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, NavigationActivity::class.java)
+            val intent = Intent(this, PopupMenuActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)
