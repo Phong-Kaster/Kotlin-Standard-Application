@@ -41,6 +41,13 @@ android {
     dataBinding {
         enabled = true
     }
+
+    /*save default language*/
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
 }
 dependencies {
     def core_version = "1.6.0"

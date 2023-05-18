@@ -13,5 +13,7 @@ class Constant {
         const val LANGUAGE_PT = "pt"/*portuguese*/
         const val LANGUAGE_EN = "en"/*english*/
         const val LANGUAGE_VI = "vi"/*vietnamese*/
+
+        const val DEFAULT_LANGUAGE = "DEFAULT_LANGUAGE"
     }
 }
