@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlinstandardapplication.Canvaspage.CanvasActivity
 import com.example.kotlinstandardapplication.Coroutinepage.CoroutineActivity
@@ -13,16 +14,27 @@ import com.example.kotlinstandardapplication.Multipurpose.Notification
 import com.example.kotlinstandardapplication.Musicpage.MusicActivity
 import com.example.kotlinstandardapplication.Navigation.NavigationActivity
 import com.example.kotlinstandardapplication.PopupMenu.PopupMenuActivity
+import com.example.kotlinstandardapplication.Util.SharePreferenceUtil2
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        
         Notification.createNotificationChannel(this)
         openActivity()
 
+
+        /*show notification*/
         Notification.setupNotificationWithImage(this, this, "Heil Hitler")
+
+
+        /*share preference version 2*/
+        SharePreferenceUtil2.initialize(this)
+        val defaultLanguage = SharePreferenceUtil2.instance?.defaultLanguage
+        Toast.makeText(this, "language: $defaultLanguage", Toast.LENGTH_SHORT).show()
     }
 
 

@@ -3,15 +3,10 @@ package com.example.kotlinstandardapplication.PopupMenu
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.view.menu.MenuBuilder
-import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.PopupMenu
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinstandardapplication.Adapter.LanguageAdapter
@@ -19,8 +14,8 @@ import com.example.kotlinstandardapplication.Model.Language
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.Util.Constant
 import com.example.kotlinstandardapplication.Util.SharePreferenceUtil
+import com.example.kotlinstandardapplication.Util.SharePreferenceUtil2
 import com.example.kotlinstandardapplication.databinding.ActivityPopupMenuBinding
-import java.lang.reflect.Field
 
 
 class PopupMenuActivity : AppCompatActivity(), LanguageAdapter.Callback {
@@ -125,6 +120,7 @@ class PopupMenuActivity : AppCompatActivity(), LanguageAdapter.Callback {
 
     override fun select(codeName: String) {
         SharePreferenceUtil.changeDefaultLanguage(this, codeName)
+        SharePreferenceUtil2.instance?.defaultLanguage = codeName
         Toast.makeText(this, getString(R.string.change_default_language_successfully), Toast.LENGTH_SHORT).show()
         /*val intent = Intent(requireContext(), MainActivity::class.java)*/
         /*intent.putExtra(Constants.IS_CHANGE_LANGUAGE, true)*/
