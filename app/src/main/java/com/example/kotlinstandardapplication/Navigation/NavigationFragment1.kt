@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SpinnerAdapter
 import androidx.databinding.DataBindingUtil
 import com.example.kotlinstandardapplication.Adapter.MenuAdapter
 import com.example.kotlinstandardapplication.Model.Menu
@@ -16,7 +15,7 @@ import com.example.kotlinstandardapplication.databinding.FragmentNavigation1Bind
 class NavigationFragment1 : Fragment() {
 
     private val TAG = "Navigation Activity"
-    private lateinit var navigation1Binding: FragmentNavigation1Binding
+    private lateinit var binding: FragmentNavigation1Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +25,8 @@ class NavigationFragment1 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        navigation1Binding = DataBindingUtil.inflate(inflater, R.layout.fragment_navigation1, container, false)
-        return navigation1Binding.root
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_navigation1, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,6 +46,6 @@ class NavigationFragment1 : Fragment() {
 
         Log.d(TAG, "setupComponent: ${list.size}")
         val spinnerAdapter = MenuAdapter(requireContext(), list)
-        navigation1Binding.spinnerMenu.adapter = spinnerAdapter
+        binding.spinnerMenu.adapter = spinnerAdapter
     }
 }

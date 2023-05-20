@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/startDestination">
+    <fragment
+        android:id="@+id/startDestination"
+        android:name="com.example.kotlinstandardapplication.Navigation2.NavigationFragment3"
+        android:label="Navigation Fragment 3"
+        tools:layout="@layout/fragment_navigation3">
+        <action
+            android:id="@+id/action_navigationFragment3_to_navigationFragment4"
+            app:destination="@id/navigationFragment4"
+            app:popUpTo="@navigation/navigation_graph_2"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondDestination"
+        android:name="com.example.kotlinstandardapplication.Navigation2.NavigationFragment4"
+        android:label="Navigation Fragment 4"
+        tools:layout="@layout/fragment_navigation4" >
+
+
+        <action
+            android:id="@+id/action_navigationFragment4_to_navigationFragment5"
+            app:destination="@id/thirdDestination"
+            app:popUpTo="@navigation/navigation_graph_2"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdDestination"
+        android:name="com.example.kotlinstandardapplication.Navigation2.NavigationFragment5"
+        android:label="Navigation Fragment 5"
+        tools:layout="@layout/fragment_navigation5"/>
+</navigation>
