@@ -6,15 +6,10 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kotlinstandardapplication.Canvaspage.CanvasActivity
-import com.example.kotlinstandardapplication.Coroutinepage.CoroutineActivity
-import com.example.kotlinstandardapplication.Loginpage.LoginActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.Multipurpose.Notification
-import com.example.kotlinstandardapplication.Musicpage.MusicActivity
-import com.example.kotlinstandardapplication.Navigation.NavigationActivity
-import com.example.kotlinstandardapplication.Navigation2.Navigation2Activity
-import com.example.kotlinstandardapplication.PopupMenu.PopupMenuActivity
+import com.example.kotlinstandardapplication.Navigationpage2.Navigation2Activity
+import com.example.kotlinstandardapplication.PopupMenuPage.PopupMenuActivity
 import com.example.kotlinstandardapplication.Util.SharePreferenceUtil2
 
 
@@ -54,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     private fun openActivity()
     {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Navigation2Activity::class.java)
+            val intent = Intent(this, PopupMenuActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)

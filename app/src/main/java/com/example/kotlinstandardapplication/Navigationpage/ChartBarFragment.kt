@@ -1,15 +1,13 @@
-package com.example.kotlinstandardapplication.Navigation
+package com.example.kotlinstandardapplication.Navigationpage
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.databinding.FragmentChartBarBinding
-import com.example.kotlinstandardapplication.databinding.FragmentChartPieBinding
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry

@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginHorizontal="20dp"
-        tools:context=".Navigation2.NavigationFragment3">
+        tools:context=".Navigationpage2.NavigationFragment3">
 
 
         <Button

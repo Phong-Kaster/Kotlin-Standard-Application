@@ -1,16 +1,13 @@
-package com.example.kotlinstandardapplication.Navigation
+package com.example.kotlinstandardapplication.Navigationpage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.databinding.ActivityNavigationBinding
-import com.google.android.material.navigation.NavigationBarItemView
-import com.google.android.material.navigation.NavigationBarView
 
 
 /**

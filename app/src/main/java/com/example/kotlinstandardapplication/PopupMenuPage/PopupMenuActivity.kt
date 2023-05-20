@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.PopupMenu
+package com.example.kotlinstandardapplication.PopupMenuPage
 
 import android.annotation.SuppressLint
 import android.os.Bundle

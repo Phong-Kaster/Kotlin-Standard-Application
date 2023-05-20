@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.Navigation
+package com.example.kotlinstandardapplication.Navigationpage
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController

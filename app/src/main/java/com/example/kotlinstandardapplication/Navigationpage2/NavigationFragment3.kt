@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.Navigation2
+package com.example.kotlinstandardapplication.Navigationpage2
 
 import android.os.Bundle
 import android.view.LayoutInflater

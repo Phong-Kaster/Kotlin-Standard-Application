@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.Navigation
+package com.example.kotlinstandardapplication.Navigationpage
 
 import android.os.Bundle
 import android.util.Log

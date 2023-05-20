@@ -5,7 +5,7 @@
     app:startDestination="@id/startDestination">
     <fragment
         android:id="@+id/startDestination"
-        android:name="com.example.kotlinstandardapplication.Navigation2.NavigationFragment3"
+        android:name="com.example.kotlinstandardapplication.Navigationpage2.NavigationFragment3"
         android:label="Navigation Fragment 3"
         tools:layout="@layout/fragment_navigation3">
         <action
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/secondDestination"
-        android:name="com.example.kotlinstandardapplication.Navigation2.NavigationFragment4"
+        android:name="com.example.kotlinstandardapplication.Navigationpage2.NavigationFragment4"
         android:label="Navigation Fragment 4"
         tools:layout="@layout/fragment_navigation4" >
 
@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/thirdDestination"
-        android:name="com.example.kotlinstandardapplication.Navigation2.NavigationFragment5"
+        android:name="com.example.kotlinstandardapplication.Navigationpage2.NavigationFragment5"
         android:label="Navigation Fragment 5"
         tools:layout="@layout/fragment_navigation5"/>
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.Navigation
+package com.example.kotlinstandardapplication.Navigationpage
 
 import android.graphics.Color
 import android.os.Bundle
