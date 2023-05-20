@@ -14,4 +14,7 @@
 
     <color name="color_theme_button">#5e147d</color>
     <color name="color_theme_input">#ECEEF0</color>
+
+    <color name="colorBackground">#505050</color>
+    <color name="colorPaint">#FFFFEB3B</color>
 </resources>

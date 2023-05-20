@@ -18,6 +18,9 @@
         android:theme="@style/Theme.KotlinStandardApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Canvaspage.CanvasActivity"
+            android:exported="false" />
+        <activity
             android:name=".Coroutinepage.CoroutineActivity"
             android:exported="false" />
         <activity

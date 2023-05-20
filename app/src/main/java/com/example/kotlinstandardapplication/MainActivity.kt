@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kotlinstandardapplication.Canvaspage.CanvasActivity
 import com.example.kotlinstandardapplication.Coroutinepage.CoroutineActivity
 import com.example.kotlinstandardapplication.Loginpage.LoginActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun openActivity()
     {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, PopupMenuActivity::class.java)
+            val intent = Intent(this, CanvasActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)
