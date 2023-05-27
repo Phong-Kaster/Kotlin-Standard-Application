@@ -35,8 +35,8 @@ class NavigationFragment3 : Fragment() {
     private fun setupEvent()
     {
         binding.gotoFragment4.setOnClickListener {
-            val destination: NavDirections = NavigationFragment3Directions.actionNavigationFragment3ToNavigationFragment4()
-            findNavController().navigate(destination)
+            /*val destination: NavDirections = NavigationFragment3Directions.actionNavigationFragment3ToNavigationFragment4()
+            findNavController().navigate(destination)*/
         }
 
         /*binding.gotoFragment5.setOnClickListener {

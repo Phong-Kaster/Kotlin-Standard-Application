@@ -8,12 +8,6 @@
         android:name="com.example.kotlinstandardapplication.Navigationpage2.NavigationFragment3"
         android:label="Navigation Fragment 3"
         tools:layout="@layout/fragment_navigation3">
-        <action
-            android:id="@+id/action_navigationFragment3_to_navigationFragment4"
-            app:destination="@id/navigationFragment4"
-            app:popUpTo="@navigation/navigation_graph_2"
-            app:popUpToInclusive="true" />
-
     </fragment>
 
     <fragment

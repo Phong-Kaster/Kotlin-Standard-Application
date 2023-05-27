@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user1"
+            type="com.example.kotlinstandardapplication.databindingpage.User" />
+
+        <variable
+            name="user2"
+            type="com.example.kotlinstandardapplication.databindingpage.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".databindingpage.DataBindActivity">
+
+        <TextView
+            android:layout_marginVertical="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user1.name}" />
+
+        <TextView
+            android:layout_marginVertical="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(user1.birthYear)}" />
+
+        <TextView
+            android:layout_marginVertical="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user2.name}" />
+
+        <TextView
+            android:layout_marginVertical="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(user2.birthYear)}"/>
+
+
+        <Button
+            android:id="@+id/buttonChange"
+            android:text="Change"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>
