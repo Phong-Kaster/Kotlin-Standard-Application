@@ -18,6 +18,9 @@
         android:theme="@style/Theme.KotlinStandardApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Canvaspage.CanvasDrawActivity"
+            android:exported="false" />
+        <activity
             android:name=".databindingpage.DataBindActivity"
             android:exported="false" />
         <activity
