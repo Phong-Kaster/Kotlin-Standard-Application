@@ -1,19 +1,23 @@
 package com.example.kotlinstandardapplication.Canvaspage
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.RectF
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
 import android.graphics.drawable.shapes.RectShape
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
+import android.util.TypedValue
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.databinding.ActivityCanvasDrawBinding
+
 
 class CanvasDrawActivity : AppCompatActivity() {
 
@@ -31,6 +35,9 @@ class CanvasDrawActivity : AppCompatActivity() {
         drawShape()
         drawCircle()
         drawLine()
+        /*drawArc()*/
+        drawPoint()
+        drawText()
     }
 
     private fun createBitmap(){
@@ -39,7 +46,7 @@ class CanvasDrawActivity : AppCompatActivity() {
 
         /*assign it to a Canvas*/
         canvas = Canvas(bitmap)
-        canvas.drawARGB(255, 78, 168, 186);
+        canvas.drawARGB(255, 78, 168, 186)
     }
 
     private fun drawShape(){
@@ -72,7 +79,7 @@ class CanvasDrawActivity : AppCompatActivity() {
         /*configure the pen*/
         paint = Paint()
         paint.color = Color.parseColor("#FFFFFF")
-        paint.strokeWidth = 30F
+        paint.strokeWidth = 25F
         paint.style = Paint.Style.STROKE
         paint.isAntiAlias = true
         paint.isDither = true
@@ -99,6 +106,42 @@ class CanvasDrawActivity : AppCompatActivity() {
     }
 
     private fun drawLine(){
+        paint.strokeCap = Paint.Cap.ROUND
         canvas.drawLine(450F, 100F, 450F, 400F, paint)
+
+        paint.strokeCap = Paint.Cap.BUTT
+        canvas.drawLine(550F, 100F, 550F, 400F, paint)
+
+        paint.strokeCap = Paint.Cap.SQUARE
+        canvas.drawLine(650F, 100F, 650F, 400F, paint)
+    }
+
+    private fun drawArc(){
+        //Draw Arc
+        val width = 200f
+        val height = 200f
+
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
+        val left = (400 - width) / 2.0f
+        val top = (400 - height) / 2.0f
+        canvas.drawArc(RectF(left, top, left + width, top + height), 45f, 270f, true, paint)
+    }
+
+    private fun drawPoint(){
+        paint.color = resources.getColor(R.color.purple_700, null)
+        paint.strokeCap = Paint.Cap.ROUND
+        canvas.drawPoint(600F, 600F, paint)
+    }
+
+    private fun drawText(){
+        /*draw text*/
+        paint.color = Color.WHITE
+        paint.style = Paint.Style.FILL
+        /*canvas.drawPaint(paint)*/
+
+        paint.color = Color.BLACK
+        paint.textSize = 20f
+        canvas.drawText("Some Text", 10f, 25f, paint)
     }
 }
