@@ -17,4 +17,8 @@
 
     <color name="colorBackground">#505050</color>
     <color name="colorPaint">#FFFFEB3B</color>
+
+    <color name="colorYellow">#FFFFEB3B</color>
+    <color name="colorBlue">#025DB8</color>
+    <color name="colorRed">#FF3543</color>
 </resources>

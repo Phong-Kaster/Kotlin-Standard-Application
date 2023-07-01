@@ -18,7 +18,10 @@
         android:theme="@style/Theme.KotlinStandardApplication"
         tools:targetApi="31">
         <activity
-            android:name=".Canvaspage.CanvasDrawActivity"
+            android:name=".canvaspage.chart.CanvasDrawActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".canvaspage.basic.CanvasDrawActivity"
             android:exported="false" />
         <activity
             android:name=".databindingpage.DataBindActivity"
@@ -27,7 +30,7 @@
             android:name=".Navigationpage2.Navigation2Activity"
             android:exported="false" />
         <activity
-            android:name=".Canvaspage.CanvasActivity"
+            android:name=".canvaspage.basic.CanvasActivity"
             android:exported="false" />
         <activity
             android:name=".Coroutinepage.CoroutineActivity"

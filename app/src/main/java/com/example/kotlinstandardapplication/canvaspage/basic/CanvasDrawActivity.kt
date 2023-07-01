@@ -1,6 +1,5 @@
-package com.example.kotlinstandardapplication.Canvaspage
+package com.example.kotlinstandardapplication.canvaspage.basic
 
-import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
@@ -12,13 +11,16 @@ import android.graphics.drawable.shapes.OvalShape
 import android.graphics.drawable.shapes.RectShape
 import android.os.Bundle
 import android.util.DisplayMetrics
-import android.util.TypedValue
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.databinding.ActivityCanvasDrawBinding
 
-
+/**
+ * @author Phong-Kaster
+ * @since 29-06-2023
+ * draw basic shapes
+ */
 class CanvasDrawActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCanvasDrawBinding

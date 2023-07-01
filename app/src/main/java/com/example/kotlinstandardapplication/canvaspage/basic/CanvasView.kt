@@ -1,9 +1,8 @@
-package com.example.kotlinstandardapplication.Canvaspage
+package com.example.kotlinstandardapplication.canvaspage.basic
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
-import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration

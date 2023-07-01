@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/gray"
-        tools:context=".Canvaspage.CanvasDrawActivity">
+        tools:context=".canvaspage.basic.CanvasDrawActivity">
 
         <ImageView
             android:layout_gravity="center"

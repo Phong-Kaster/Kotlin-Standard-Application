@@ -1,15 +1,8 @@
-package com.example.kotlinstandardapplication.Canvaspage
+package com.example.kotlinstandardapplication.canvaspage.basic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Canvas
-import androidx.compose.ui.unit.dp
 import com.example.kotlinstandardapplication.R
 
 class CanvasActivity : AppCompatActivity() {

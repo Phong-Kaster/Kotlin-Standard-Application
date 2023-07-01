@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        tools:context=".canvaspage.chart.CanvasDrawActivity2">
+
+        <com.example.kotlinstandardapplication.canvaspage.chart.linechart.LineChartContainer
+            android:layout_width="match_parent"
+            android:layout_height="600dp" />
+
+        <TextView
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/this_is_a_line_chart" />
+
+    </LinearLayout>
+</layout>
