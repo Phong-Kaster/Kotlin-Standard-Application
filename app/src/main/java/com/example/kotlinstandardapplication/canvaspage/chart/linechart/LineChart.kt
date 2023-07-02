@@ -1,14 +1,16 @@
 package com.example.kotlinstandardapplication.canvaspage.chart.linechart
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.DashPathEffect
 import android.graphics.Paint
 import android.graphics.Rect
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.VectorDrawable
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
-import androidx.compose.ui.graphics.PaintingStyle
 import androidx.core.content.ContextCompat
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.canvaspage.chart.linechart.CanvasUtils.Companion.dpToPx
@@ -26,7 +28,7 @@ constructor(context: Context, attrs: AttributeSet? = null) :
     var paddingTopChart: Float = 10.toPx
     var paddingBottomChart: Float = 50.toPx
 
-    var paddingLeftChart: Float = 25.toPx
+    var paddingLeftChart: Float = 12.toPx
     var paddingRightChart: Float = 0f
 
     var color: Int = ContextCompat.getColor(context, R.color.colorYellow)
@@ -60,6 +62,7 @@ constructor(context: Context, attrs: AttributeSet? = null) :
     private val paintAxisX = Paint()/*to draw axis X*/
     private val paintTextAxisX = Paint()/*to draw text on axis X*/
     private val paintItem = Paint()/*to draw item*/
+    private val paintItemText = Paint()
 
     /*this block code below runs immediately after this class created*/
     init {
@@ -71,13 +74,38 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         paintBaseline.strokeWidth = dpToPx(1, context).toFloat()
         paintBaseline.style = Paint.Style.STROKE
         paintBaseline.pathEffect = DashPathEffect(floatArrayOf(10.0f, 5.0f), 0.0f)
+
+        /*to draw number on item*/
+        paintItemText.flags = Paint.ANTI_ALIAS_FLAG
+        paintItemText.isAntiAlias = true
+        paintItemText.color = -16777216
+        paintItemText.textSize = dpToPx(12, context).toFloat()
+        paintItemText.color = ContextCompat.getColor(context, R.color.white)
+        /*val typeface = Typeface.createFromAsset(context.assets, "fonts/montserrat_500.ttf")
+        paintMarkText.typeface = typeface*/
     }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        var newWidth = if (coordinates.size > 1) {
+            ((coordinates.size) * spaceItem + paddingLeftChart * 2).toInt()
+        } else {
+            0
+        }
+        if (widthMeasureSpec > newWidth) {
+            newWidth = widthMeasureSpec
+        }
+        super.onMeasure(newWidth, heightMeasureSpec)
+        layoutParams?.width = newWidth
+    }
+
+
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         drawBaseline(canvas)
         drawAxisX(canvas)
-        Log.d(TAG, "onDraw: ")
+        drawItem(canvas)
+        drawItemMark(canvas)
     }
 
     private fun drawBaseline(canvas: Canvas?){
@@ -97,10 +125,10 @@ constructor(context: Context, attrs: AttributeSet? = null) :
             this.paintBaseline.color = ContextCompat.getColor(context, colorBaseLine(input))
 
             /*begin draw*/
-            val startX = rect.width() + 63.toPx
-            val startY = y - marginBottomChart
+            val startX = 0F
+            val startY = y
             val stopX = this.width.toPx
-            val stopY = y - marginBottomChart
+            val stopY = y
             canvas?.drawLine(startX, startY, stopX, stopY, this.paintBaseline)
             ++i
         }
@@ -111,16 +139,118 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         val rect = Rect()
         this.paintBaseline.getTextBounds(content, 0, content.length, rect)
 
-        val startX = rect.width() + 62.toPx
+        val startX = 0F
         val startY = this.height - marginBottomChart
         val stopX = this.width.toPx
         val stopY = this.height - marginBottomChart
         canvas?.drawLine(startX, startY, stopX, stopY, this.paintBaseline)
     }
 
-    private fun colorBaseLine(input: Int): Int {
-        return if (input > 800) R.color.colorRed
-        else if( input in 400..800) R.color.colorYellow
-        else R.color.black
+    private fun drawItem(canvas: Canvas?){
+
+        val x: FloatArray = this.setAxisX()
+        val y: FloatArray = this.setAxisY()
+
+        coordinates.forEachIndexed { index, coordinate ->
+            val pointY: Float = this.length * (coordinate.value / maxValue)
+            val (value, timeStr, colorId, icon) = coordinate
+            if ("" != timeStr) {
+                /*draw circle*/
+                paintItem.color = ContextCompat.getColor(context, colorId)
+                canvas?.drawCircle(paddingLeftChart + spaceItem * index, height - pointY - marginBottomChart, dpToPx(4, context).toFloat(), this.paintItem)
+                drawTextValue(canvas, value.toString(), paddingLeftChart + spaceItem * index, height - y[index] - 30.0f - marginBottomChart)
+
+                /*draw icon*/
+               if (icon != 0) {
+                    val iconBitmap = getIconBitmap(context, icon)
+                    if (iconBitmap != null) {
+                        canvas?.drawBitmap(iconBitmap, paddingLeftChart + spaceItem * index - (12.toPx / 2), height - y[index] + 5.toPx - marginBottomChart, null as Paint?)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun drawItemMark(canvas: Canvas?){
+        val x: FloatArray = this.setAxisX()
+        val y: FloatArray = this.setAxisY()
+
+        coordinates.forEachIndexed { index, coordinate ->
+            val pointY: Float = this.length * (coordinate.value / maxValue)
+            val (value, timeStr, colorId, icon) = coordinate
+            if ("" != timeStr) {
+                /*draw circle*/
+                paintItem.color = ContextCompat.getColor(context, R.color.colorYellow)
+                /*canvas?.drawCircle(paddingLeftChart + spaceItem * index, height - pointY - marginBottomChart, dpToPx(4, context).toFloat(), this.paintItem)
+                drawTextValue(canvas, value.toString(), paddingLeftChart + spaceItem * index, height - y[index] - 30.0f - marginBottomChart)*/
+
+                canvas?.drawLine(
+                    paddingLeftChart + spaceItem * index,
+                    height - marginBottomChart,
+                    paddingLeftChart + spaceItem * index,
+                    height - marginBottomChart + 10.toPx,
+                    paintItem)
+
+                canvas?.drawText(timeStr, paddingLeftChart + spaceItem * index - 10.toPx, height - marginBottomChart + 20.toPx, paintItemText)
+            }
+        }
+    }
+
+    private fun drawTextValue(canvas: Canvas?, value: String, x: Float, y: Float) {
+        this.paintItemText.measureText(value)
+        val rect = Rect()
+        this.paintItemText.getTextBounds(value, 0, value.length, rect)
+        canvas?.drawText(value, x - (rect.width() / 2).toFloat(), y - rect.height().toFloat() / 4, this.paintItemText)
+    }
+
+    private fun setAxisX(): FloatArray {
+        val axisX = FloatArray(coordinates.size)
+        for (i in coordinates.indices) {
+            axisX[i] = spaceItem * i.toFloat()
+        }
+        return axisX
+    }
+
+    private fun setAxisY(): FloatArray {
+        val axisY = FloatArray(coordinates.size)
+        for (i in coordinates.indices) {
+            axisY[i] = length * (coordinates[i].value / maxValue)
+        }
+        return axisY
+    }
+
+    /*return bitmap*/
+    private fun getIconBitmap(context: Context, drawableId: Int): Bitmap? {
+        return when (val drawable = ContextCompat.getDrawable(context, drawableId)) {
+            is BitmapDrawable -> {
+                BitmapFactory.decodeResource(context.resources, drawableId)
+            }
+
+            is VectorDrawable -> {
+                getBitmap(drawable)
+            }
+
+            else -> {
+                throw IllegalArgumentException("unsupported drawable type")
+            }
+        }
+    }
+
+    /*return a bitmap from resource/drawable*/
+    private fun getBitmap(vectorDrawable: VectorDrawable): Bitmap? {
+        val bitmap = Bitmap.createBitmap(vectorDrawable.intrinsicWidth, vectorDrawable.intrinsicHeight, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        vectorDrawable.setBounds(0, 0, canvas.width, canvas.height)
+        vectorDrawable.draw(canvas)
+        return bitmap
+    }
+
+
+    companion object{
+        fun colorBaseLine(input: Int): Int {
+            return if (input > 800) R.color.colorRed
+            else if( input in 400..800) R.color.colorYellow
+            else R.color.colorBlue
+        }
     }
 }

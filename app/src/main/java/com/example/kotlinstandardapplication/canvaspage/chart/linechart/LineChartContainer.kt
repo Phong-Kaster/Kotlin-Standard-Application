@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.databinding.DataBindingUtil
 import com.example.kotlinstandardapplication.R
-import com.example.kotlinstandardapplication.databinding.LayoutLineChartBinding
+import com.example.kotlinstandardapplication.databinding.LayoutLineChartContainerBinding
 
 /**
  * @since 01-07-2023
@@ -24,24 +24,39 @@ constructor(
     defaultStyleAttribute: Int = 0
 ) :
     FrameLayout(context, attributeSet, defaultStyleAttribute) {
-    private var binding: LayoutLineChartBinding
+    private var binding: LayoutLineChartContainerBinding
 
-    var maxValue: Int = 500
+    var maxValue: Int = 1000
         set(value) {
             field = value
             /*binding.lineChart.maxValue = value*/
             binding.axisY.maxValue = value
         }
 
+    var coordinates: MutableList<Coordinate> = mutableListOf()
+        set(value) {
+            if (value.size == 1) {
+                value.add(Coordinate(0f, "", 0, 0))
+                value.add(Coordinate(0f, "", 0, 0))
+            }
+            field = value
+            binding.lineChart.coordinates = coordinates
+            invalidate()
+        }
+
     init {
         binding = DataBindingUtil.inflate(
             LayoutInflater.from(context),
-            R.layout.layout_line_chart,
+            R.layout.layout_line_chart_container,
             null,
             false
         )
         addView(binding.root)
 
-        /*binding.lineChart.maxValue = maxValue*/
+        binding.lineChart.maxValue = maxValue
+        binding.axisY.maxValue = maxValue
+
+        val layoutParamsStart = binding.axisY.layoutParams
+        layoutParamsStart?.width = CanvasUtils.dpToPx(80, context)
     }
 }

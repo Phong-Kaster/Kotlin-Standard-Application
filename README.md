@@ -63,7 +63,33 @@ This section describes what i have practiced in each package having `page` suffi
 
 ## [**Canvaspage**](#canvaspage)
 
-Canvas page - the name has described that package having. I just do basic practise about using Canvans in Android. No thing more at all😂😂
+Canvas page - the name has described that package having. I just do basic practise about using Canvans in Android.
+
+There are 2 sub-package in Canvas page
+
+1. Basic: I created 2 activities. The first activity(Canvas Activity) includes Canvas View runs as Galaxy S-Pen mode. You can draw anything with touch, swipe action.
+
+The second activity, i used Canvas API to draw some basic shapes: Line, Point, Text, Circle, Arc
+
+
+<p align="center">
+    <img src="./photo/photo_06.png" height="640" />
+</p>
+<h3 align="center">
+
+***Canvas API supports draw basic shapes***
+</h3>
+
+2. Chart: I summed up what i learnt from Canvas API to draw a line chart example with fake data. We can scroll horizontally to watch more.
+
+<p align="center">
+    <img src="./photo/photo_07.png" height="640" />
+    <img src="./photo/photo_08.png" height="640" />
+</p>
+<h3 align="center">
+
+***Combine all basic Canvas APIs, i draw this line chart***
+</h3>
 
 ## [**Coroutinepage**](#coroutinepage)
 

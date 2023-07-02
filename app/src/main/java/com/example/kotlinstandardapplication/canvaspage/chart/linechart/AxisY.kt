@@ -1,20 +1,18 @@
 package com.example.kotlinstandardapplication.canvaspage.chart.linechart
 
 import android.content.Context
-import android.content.res.Resources
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.Log
-import android.util.TypedValue
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.canvaspage.chart.linechart.CanvasUtils.Companion.dpToPx
 import com.example.kotlinstandardapplication.canvaspage.chart.linechart.CanvasUtils.Companion.toPx
+
 
 class AxisY
 @JvmOverloads
@@ -59,11 +57,16 @@ constructor(
         this.paintLine.color = Color.YELLOW
     }
 
+    /*override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val width = MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY)
+        val height = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY)
+        setMeasuredDimension(width, height)
+    }*/
+
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         this.drawAxisY(canvas)
         this.drawBoundaryAxisY(canvas)
-
     }
 
 
@@ -82,7 +85,7 @@ constructor(
 
             this.paint.color = ContextCompat.getColor(context, R.color.colorYellow)
             this.paint.typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
-            canvas?.drawText(content, 70f, y - marginBottomChart + (rect.height() / 2).toFloat(), this.paint)
+            canvas?.drawText(content, 30f, y - marginBottomChart + (rect.height() / 2).toFloat(), this.paint)
             ++i
         }
 
@@ -96,7 +99,7 @@ constructor(
             content.length, rect)
 
         /*axis X: start X is the same as stop X*/
-        val startX = rect.width().toPx - 20.toPx
+        val startX = rect.width().toPx - 15.toPx
         val stopX = startX
 
         /*axis Y: */
