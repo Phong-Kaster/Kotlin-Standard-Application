@@ -67,7 +67,13 @@ Canvas page - the name has described that package having. I just do basic practi
 
 There are 2 sub-package in Canvas page
 
-1. Basic: I created 2 activities. The first activity(Canvas Activity) includes Canvas View runs as Galaxy S-Pen mode. You can draw anything with touch, swipe action.
+1. Basic: I created 2 activities.
+
+The first activity(Canvas Activity) includes Canvas View runs as Galaxy S-Pen mode. You can draw anything with touch, swipe action.
+
+
+https://github.com/Phong-Kaster/Kotlin-Standard-Application/assets/58034430/e3895713-bdb4-4a55-8cc9-b1b250f02eff
+
 
 The second activity, i used Canvas API to draw some basic shapes: Line, Point, Text, Circle, Arc
 
