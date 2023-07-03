@@ -1,10 +1,6 @@
 package com.example.kotlinstandardapplication.canvaspage.chart.linechart
 
-import androidx.annotation.ColorRes
-import androidx.annotation.DrawableRes
-import java.sql.Timestamp
-
-data class Coordinate(val value: Float,
-                      val time: String,
-                      @ColorRes val colorId: Int,
-                      @DrawableRes val icon: Int)
+data class Coordinate
+constructor(var x: Float,var y: Float, var value: Float)
+{
+}
