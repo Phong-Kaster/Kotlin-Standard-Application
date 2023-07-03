@@ -33,14 +33,14 @@ constructor(
             binding.axisY.maxValue = value
         }
 
-    var coordinates: MutableList<Coordinate> = mutableListOf()
+    var coordinates: MutableList<LineChartItem> = mutableListOf()
         set(value) {
             if (value.size == 1) {
-                value.add(Coordinate(0f, "", 0, 0))
-                value.add(Coordinate(0f, "", 0, 0))
+                value.add(LineChartItem(0f, "", 0, 0))
+                value.add(LineChartItem(0f, "", 0, 0))
             }
             field = value
-            binding.lineChart.coordinates = coordinates
+            binding.lineChart.items = coordinates
             invalidate()
         }
 

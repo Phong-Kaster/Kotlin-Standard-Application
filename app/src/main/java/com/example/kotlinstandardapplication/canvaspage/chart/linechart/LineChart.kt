@@ -10,7 +10,10 @@ import android.graphics.Rect
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.VectorDrawable
 import android.util.AttributeSet
+import android.util.Log
+import android.view.MotionEvent
 import android.view.View
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.kotlinstandardapplication.R
 import com.example.kotlinstandardapplication.canvaspage.chart.linechart.CanvasUtils.Companion.dpToPx
@@ -43,7 +46,7 @@ constructor(context: Context, attrs: AttributeSet? = null) :
             invalidate()
         }
 
-    var coordinates: List<Coordinate> = mutableListOf()
+    var items: List<LineChartItem> = mutableListOf()
         set(value) {
             field = value
             invalidate()
@@ -59,10 +62,10 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         get() = height - (paddingBottomChart + paddingTopChart + marginTopChart)
 
     private val paintBaseline = Paint()/*to draw baseline*/
-    private val paintAxisX = Paint()/*to draw axis X*/
-    private val paintTextAxisX = Paint()/*to draw text on axis X*/
     private val paintItem = Paint()/*to draw item*/
     private val paintItemText = Paint()
+
+    private val coordinateArray = ArrayList<Coordinate>()
 
     /*this block code below runs immediately after this class created*/
     init {
@@ -81,13 +84,11 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         paintItemText.color = -16777216
         paintItemText.textSize = dpToPx(12, context).toFloat()
         paintItemText.color = ContextCompat.getColor(context, R.color.white)
-        /*val typeface = Typeface.createFromAsset(context.assets, "fonts/montserrat_500.ttf")
-        paintMarkText.typeface = typeface*/
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        var newWidth = if (coordinates.size > 1) {
-            ((coordinates.size) * spaceItem + paddingLeftChart * 2).toInt()
+        var newWidth = if (items.size > 1) {
+            ((items.size) * spaceItem + paddingLeftChart * 2).toInt()
         } else {
             0
         }
@@ -151,13 +152,18 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         val x: FloatArray = this.setAxisX()
         val y: FloatArray = this.setAxisY()
 
-        coordinates.forEachIndexed { index, coordinate ->
+        items.forEachIndexed { index, coordinate ->
             val pointY: Float = this.length * (coordinate.value / maxValue)
             val (value, timeStr, colorId, icon) = coordinate
             if ("" != timeStr) {
                 /*draw circle*/
                 paintItem.color = ContextCompat.getColor(context, colorId)
-                canvas?.drawCircle(paddingLeftChart + spaceItem * index, height - pointY - marginBottomChart, dpToPx(4, context).toFloat(), this.paintItem)
+
+                val valueX = paddingLeftChart + spaceItem * index
+                val valueY =height - pointY - marginBottomChart
+                coordinateArray.add(Coordinate(valueX,valueY, value))
+
+                canvas?.drawCircle(valueX, valueY, dpToPx(4, context).toFloat(), this.paintItem)
                 drawTextValue(canvas, value.toString(), paddingLeftChart + spaceItem * index, height - y[index] - 30.0f - marginBottomChart)
 
                 /*draw icon*/
@@ -175,7 +181,7 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         val x: FloatArray = this.setAxisX()
         val y: FloatArray = this.setAxisY()
 
-        coordinates.forEachIndexed { index, coordinate ->
+        items.forEachIndexed { index, coordinate ->
             val pointY: Float = this.length * (coordinate.value / maxValue)
             val (value, timeStr, colorId, icon) = coordinate
             if ("" != timeStr) {
@@ -204,17 +210,17 @@ constructor(context: Context, attrs: AttributeSet? = null) :
     }
 
     private fun setAxisX(): FloatArray {
-        val axisX = FloatArray(coordinates.size)
-        for (i in coordinates.indices) {
+        val axisX = FloatArray(items.size)
+        for (i in items.indices) {
             axisX[i] = spaceItem * i.toFloat()
         }
         return axisX
     }
 
     private fun setAxisY(): FloatArray {
-        val axisY = FloatArray(coordinates.size)
-        for (i in coordinates.indices) {
-            axisY[i] = length * (coordinates[i].value / maxValue)
+        val axisY = FloatArray(items.size)
+        for (i in items.indices) {
+            axisY[i] = length * (items[i].value / maxValue)
         }
         return axisY
     }
@@ -245,12 +251,34 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         return bitmap
     }
 
-
     companion object{
         fun colorBaseLine(input: Int): Int {
             return if (input > 800) R.color.colorRed
             else if( input in 400..800) R.color.colorYellow
             else R.color.colorBlue
         }
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        val x = event?.x
+        val y = event?.y
+
+        for(element in coordinateArray){
+            val absoluteX = Math.abs(x?.minus(element.x) ?: 0F)
+            val absoluteY = Math.abs(y?.minus(element.y) ?: 0F)
+            val flag = (0 <= absoluteX && absoluteX <= 26) && (0 <= absoluteY && absoluteY < 50)
+            if(flag){
+                Log.d(TAG, "onTouchEvent: ---------------------------------------------")
+                Log.d(TAG, "onTouchEvent: x: $x - coordinateArray: ${element.x} - absoluteX: $absoluteX")
+                Log.d(TAG, "onTouchEvent: y: $y - coordinateArray: ${element.y} - absoluteX: $absoluteY")
+                Log.d(TAG, "onTouchEvent: can show content: $flag")
+                Log.d(TAG, "onTouchEvent: value: ${element.value}")
+                Toast.makeText(context, "Value: ${element.value}", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+
+        return super.onTouchEvent(event)
     }
 }

@@ -12,6 +12,7 @@ import com.example.kotlinstandardapplication.Multipurpose.Notification
 import com.example.kotlinstandardapplication.Util.SharePreferenceUtil2
 import com.example.kotlinstandardapplication.canvaspage.basic.CanvasActivity
 import com.example.kotlinstandardapplication.canvaspage.basic.CanvasDrawActivity
+import com.example.kotlinstandardapplication.canvaspage.overlay.CanvasDrawActivity3
 
 
 class MainActivity : AppCompatActivity() {
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     private fun openActivity()
     {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, CanvasDrawActivity::class.java)
+            val intent = Intent(this, CanvasDrawActivity2::class.java)
             startActivity(intent)
             finish()
         }, 2000)

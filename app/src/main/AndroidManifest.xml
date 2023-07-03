@@ -18,6 +18,9 @@
         android:theme="@style/Theme.KotlinStandardApplication"
         tools:targetApi="31">
         <activity
+            android:name=".canvaspage.overlay.CanvasDrawActivity3"
+            android:exported="false" />
+        <activity
             android:name=".canvaspage.chart.CanvasDrawActivity2"
             android:exported="false" />
         <activity
