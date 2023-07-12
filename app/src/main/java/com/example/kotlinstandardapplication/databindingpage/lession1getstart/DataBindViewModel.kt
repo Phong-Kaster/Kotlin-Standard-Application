@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.databindingpage
+package com.example.kotlinstandardapplication.databindingpage.lession1getstart
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

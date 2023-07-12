@@ -16,7 +16,11 @@
         android:roundIcon="@drawable/ic_national_sozialismus"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinStandardApplication"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".databindingpage.lession2bindingadapter.DataBindActivity2"
+            android:exported="false" />
         <activity
             android:name=".canvaspage.overlay.CanvasDrawActivity3"
             android:exported="false" />
@@ -27,7 +31,7 @@
             android:name=".canvaspage.basic.CanvasDrawActivity"
             android:exported="false" />
         <activity
-            android:name=".databindingpage.DataBindActivity"
+            android:name=".databindingpage.lession1getstart.DataBindActivity"
             android:exported="false" />
         <activity
             android:name=".Navigationpage2.Navigation2Activity"
