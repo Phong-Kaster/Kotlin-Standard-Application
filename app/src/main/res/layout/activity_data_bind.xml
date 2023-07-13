@@ -6,15 +6,15 @@
     <data>
         <variable
             name="user1"
-            type="com.example.kotlinstandardapplication.databindingpage.User" />
+            type="com.example.kotlinstandardapplication.databindingpage.lession1getstart.User" />
 
         <variable
             name="user2"
-            type="com.example.kotlinstandardapplication.databindingpage.User" />
+            type="com.example.kotlinstandardapplication.databindingpage.lession1getstart.User" />
 
         <variable
             name="viewModel"
-            type="com.example.kotlinstandardapplication.databindingpage.DataBindViewModel" />
+            type="com.example.kotlinstandardapplication.databindingpage.lession1getstart.DataBindViewModel" />
     </data>
 
     <ScrollView
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:context=".databindingpage.DataBindActivity">
+            tools:context=".databindingpage.lession1getstart.DataBindActivity">
 
             <TextView
                 android:textSize="20sp"

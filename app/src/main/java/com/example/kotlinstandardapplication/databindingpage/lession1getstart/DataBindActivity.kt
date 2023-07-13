@@ -1,4 +1,4 @@
-package com.example.kotlinstandardapplication.databindingpage
+package com.example.kotlinstandardapplication.databindingpage.lession1getstart
 
 import android.os.Bundle
 import android.widget.Toast
@@ -27,14 +27,13 @@ class DataBindActivity : AppCompatActivity(), DataBindViewModel.Callback {
     }
 
 
-    private fun setupViewModel()
-    {
+    private fun setupViewModel() {
         viewModel = DataBindViewModel(this)
         binding.viewModel = viewModel
         binding.lifecycleOwner = this@DataBindActivity
     }
 
-    private fun setupEvent(){
+    private fun setupEvent() {
         /*There objects are bound to the UI basically*/
         binding.buttonChange.setOnClickListener {
             binding.user1 = User("Phong Kaster", 2000)

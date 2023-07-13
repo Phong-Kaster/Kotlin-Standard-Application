@@ -266,7 +266,7 @@ constructor(context: Context, attrs: AttributeSet? = null) :
         for(element in coordinateArray){
             val absoluteX = Math.abs(x?.minus(element.x) ?: 0F)
             val absoluteY = Math.abs(y?.minus(element.y) ?: 0F)
-            val flag = (0 <= absoluteX && absoluteX <= 26) && (0 <= absoluteY && absoluteY < 50)
+            val flag = (absoluteX in 0.0..26.0) && (absoluteY in 0.0..50.0)
             if(flag){
                 Log.d(TAG, "onTouchEvent: ---------------------------------------------")
                 Log.d(TAG, "onTouchEvent: x: $x - coordinateArray: ${element.x} - absoluteX: $absoluteX")
