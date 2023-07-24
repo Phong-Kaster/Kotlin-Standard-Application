@@ -9,6 +9,6 @@
     android:widgetCategory="home_screen"
     android:updatePeriodMillis="3600000"
     android:previewImage="@drawable/widget_button_preview"
-    android:configure="com.example.kotlinstandardapplication.Widgetpage.WidgetConfigurationActivity"
+    android:configure="com.example.kotlinstandardapplication.page.widgetpage.WidgetConfigurationActivity"
     android:widgetFeatures="reconfigurable">
 </appwidget-provider>

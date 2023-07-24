@@ -3,9 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kotlinstandardapplication">
 
+    <!--these features are used to use 2 permissions: CAMERA & READ PHONE STATE-->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -19,61 +27,64 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".databindingpage.lession2bindingadapter.DataBindActivity2"
+            android:name=".page.permission.PermissionActivity"
             android:exported="false" />
         <activity
-            android:name=".canvaspage.overlay.CanvasDrawActivity3"
+            android:name=".page.databindingpage.lession2bindingadapter.DataBindActivity2"
             android:exported="false" />
         <activity
-            android:name=".canvaspage.chart.CanvasDrawActivity2"
+            android:name=".page.canvaspage.overlay.CanvasDrawActivity3"
             android:exported="false" />
         <activity
-            android:name=".canvaspage.basic.CanvasDrawActivity"
+            android:name=".page.canvaspage.chart.CanvasDrawActivity2"
             android:exported="false" />
         <activity
-            android:name=".databindingpage.lession1getstart.DataBindActivity"
+            android:name=".page.canvaspage.basic.CanvasDrawActivity"
             android:exported="false" />
         <activity
-            android:name=".Navigationpage2.Navigation2Activity"
+            android:name=".page.databindingpage.lession1getstart.DataBindActivity"
             android:exported="false" />
         <activity
-            android:name=".canvaspage.basic.CanvasActivity"
+            android:name=".page.navigationpage2.Navigation2Activity"
             android:exported="false" />
         <activity
-            android:name=".Coroutinepage.CoroutineActivity"
+            android:name=".page.canvaspage.basic.CanvasActivity"
             android:exported="false" />
         <activity
-            android:name=".PopupMenuPage.PopupMenuActivity"
+            android:name=".page.coroutinepage.CoroutineActivity"
             android:exported="false" />
         <activity
-            android:name=".Navigationpage.NavigationActivity"
+            android:name=".page.popupMenuPage.PopupMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".Musicpage.MusicActivity"
+            android:name=".page.navigationpage.NavigationActivity"
             android:exported="false" />
         <activity
-            android:name=".Widgetpage.WidgetConfigurationActivity"
+            android:name=".page.musicpage.MusicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".page.widgetpage.WidgetConfigurationActivity"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Widgetpage.WidgetActivity"
+            android:name=".page.widgetpage.WidgetActivity"
             android:exported="false" />
         <activity
-            android:name=".Homepage.HomeActivity"
+            android:name=".page.homepage.HomeActivity"
             android:configChanges="orientation|screenSize|layoutDirection"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Loginpage.LoginActivity"
+            android:name=".page.loginpage.LoginActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".Introductionpage.IntroductionActivity"
+            android:name=".page.introductionpage.IntroductionActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
@@ -89,7 +100,7 @@
             </intent-filter>
         </activity> <!-- Simple Widget -->
         <receiver
-            android:name=".Widgetpage.WidgetButton"
+            android:name=".page.widgetpage.WidgetButton"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -101,7 +112,7 @@
         </receiver> <!-- end Simple Widget -->
         <!-- Widget with Configuration -->
         <receiver
-            android:name=".Widgetpage.WidgetConfigurationButton"
+            android:name=".page.widgetpage.WidgetConfigurationButton"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -111,10 +122,10 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_button_configuration_info" />
         </receiver> <!-- end Widget with Configuration -->
-        <service android:name=".Musicpage.MusicService" />
+        <service android:name=".page.musicpage.MusicService" />
 
         <receiver
-            android:name=".Musicpage.MusicBroadcastReceiver"
+            android:name=".page.musicpage.MusicBroadcastReceiver"
             android:enabled="true" />
     </application>
 

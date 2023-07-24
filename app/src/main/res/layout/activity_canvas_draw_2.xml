@@ -7,9 +7,9 @@
         android:layout_height="match_parent"
         android:background="@color/gray"
         android:orientation="vertical"
-        tools:context=".canvaspage.chart.CanvasDrawActivity2">
+        tools:context=".page.canvaspage.chart.CanvasDrawActivity2">
 
-        <com.example.kotlinstandardapplication.canvaspage.chart.linechart.LineChartContainer
+        <com.example.kotlinstandardapplication.page.canvaspage.chart.linechart.LineChartContainer
             android:id="@+id/lineChartContainer"
             android:layout_width="match_parent"
             android:layout_height="600dp" />

@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".Navigationpage.ChartPieFragment">
+        tools:context=".page.navigationpage.ChartPieFragment">
 
 
         <com.github.mikephil.charting.charts.PieChart

@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.example.kotlinstandardapplication.canvaspage.chart.linechart.AxisY
+            <com.example.kotlinstandardapplication.page.canvaspage.chart.linechart.AxisY
                 android:id="@+id/axisY"
                 android:background="@color/gray"
                 android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
-                    <com.example.kotlinstandardapplication.canvaspage.chart.linechart.LineChart
+                    <com.example.kotlinstandardapplication.page.canvaspage.chart.linechart.LineChart
                         android:id="@+id/lineChart"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />

@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray"
-        tools:context=".Coroutinepage.CoroutineActivity">
+        tools:context=".page.coroutinepage.CoroutineActivity">
 
         <TextView
             android:id="@+id/text"

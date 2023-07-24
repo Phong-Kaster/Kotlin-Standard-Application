@@ -8,7 +8,7 @@
         android:background="@color/white"
         android:backgroundTint="@color/black"
         android:layout_height="match_parent"
-        tools:context=".Navigationpage.ChartBarFragment">
+        tools:context=".page.navigationpage.ChartBarFragment">
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/chartBar"

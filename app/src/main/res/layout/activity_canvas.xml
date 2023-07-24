@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".canvaspage.basic.CanvasActivity">
+    tools:context=".page.canvaspage.basic.CanvasActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

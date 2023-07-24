@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".PopupMenuPage.PopupMenuActivity">
+        tools:context=".page.popupMenuPage.PopupMenuActivity">
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_margin="16dp"

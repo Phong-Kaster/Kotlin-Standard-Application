@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/action_home"
-        android:name="com.example.kotlinstandardapplication.Navigationpage.NavigationFragment1"
+        android:name="com.example.kotlinstandardapplication.page.navigationpage.NavigationFragment1"
         android:label="@string/home"
         tools:layout="@layout/fragment_navigation1" >
 
@@ -21,27 +21,27 @@
 
     <fragment
         android:id="@+id/action_settings"
-        android:name="com.example.kotlinstandardapplication.Navigationpage.NavigationFragment2"
+        android:name="com.example.kotlinstandardapplication.page.navigationpage.NavigationFragment2"
         android:label="@string/settings"
         tools:layout="@layout/fragment_navigation2" />
 
     <fragment
         android:id="@+id/action_chart_bar"
-        android:name="com.example.kotlinstandardapplication.Navigationpage.ChartBarFragment"
+        android:name="com.example.kotlinstandardapplication.page.navigationpage.ChartBarFragment"
         android:label="Chart Bar"
         tools:layout="@layout/fragment_chart_bar" />
 
 
     <fragment
         android:id="@+id/action_chart_pie"
-        android:name="com.example.kotlinstandardapplication.Navigationpage.ChartPieFragment"
+        android:name="com.example.kotlinstandardapplication.page.navigationpage.ChartPieFragment"
         android:label="Chart Bar"
         tools:layout="@layout/fragment_chart_pie" />
 
 
     <fragment
         android:id="@+id/action_chart_radar"
-        android:name="com.example.kotlinstandardapplication.Navigationpage.ChartRadarFragment"
+        android:name="com.example.kotlinstandardapplication.page.navigationpage.ChartRadarFragment"
         android:label="Chart Bar"
         tools:layout="@layout/fragment_chart_radar" />
 

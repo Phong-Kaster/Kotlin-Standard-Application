@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:background="@color/black"
         android:orientation="vertical"
-        tools:context=".Navigationpage.NavigationActivity">
+        tools:context=".page.navigationpage.NavigationActivity">
 
 
         <androidx.fragment.app.FragmentContainerView

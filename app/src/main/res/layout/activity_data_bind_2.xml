@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable
-            name="image"
-            type="image" />
+
     </data>
 
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +11,7 @@
         android:layout_height="match_parent"
         android:background="@color/gray"
         android:orientation="vertical"
-        tools:context=".databindingpage.lession2bindingadapter.DataBindActivity2">
+        tools:context=".page.databindingpage.lession2bindingadapter.DataBindActivity2">
 
         <ImageView
             android:layout_marginTop="120dp"
@@ -22,9 +20,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:contentDescription="@string/image"
-            android:src="@drawable/ic_balkenkreuz"
-            loadImageFromURL=""
-            tools:srcCompat="@tools:sample/avatars"/>
+            android:src="@drawable/ic_balkenkreuz"/>
 
         <TextView
             android:id="@+id/textView"

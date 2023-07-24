@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    tools:context=".Musicpage.MusicActivity">
+    tools:context=".page.musicpage.MusicActivity">
 
     <ImageButton
         android:id="@+id/buttonPlay"

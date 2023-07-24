@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlinstandardapplication.Multipurpose.Multipurpose
 import com.example.kotlinstandardapplication.Multipurpose.Notification
 import com.example.kotlinstandardapplication.Util.SharePreferenceUtil2
-import com.example.kotlinstandardapplication.databindingpage.lession2bindingadapter.DataBindActivity2
+import com.example.kotlinstandardapplication.page.databindingpage.lession2bindingadapter.DataBindActivity2
+import com.example.kotlinstandardapplication.page.permission.PermissionActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     private fun openActivity()
     {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, DataBindActivity2::class.java)
+            val intent = Intent(this, PermissionActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)
